@@ -17,10 +17,10 @@ int main()
     }
     }
     if(ans == true){
-        printf("YES");
+        printf("YES ");
     }
     else if(ans == false){
-        printf("NO\n");
+        printf("NO ");
     }
     ans = true;
     }
