@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>//4654
+#include <stdlib.h>
 
 int main()
 {
@@ -32,7 +32,8 @@ int main()
 
     for(int i=0;i<n;i++)
     {
-
+        for(int j=0;j<n;j++)
+        {
           for(int k=0;k<n;k++)
           {
               if(s[k]>=end && s[k]!=0)
@@ -44,7 +45,7 @@ int main()
                   d[k]=0;
                   j++;
               }
-          
+          }
         }
         end=0;
     }
@@ -58,7 +59,7 @@ int main()
         }
     }
 
-    for(int driver = 0; driver < car; driver++){ 
+    for(int driver = 0; driver < car; driver++){
         printf("Driver %d's schedule is", driver+1 );
         for(int f = 0; f < n*2; f++)
         {
@@ -75,4 +76,3 @@ int main()
 
     }
 }
-
