@@ -9,10 +9,10 @@ int main()
     {
        n++;
     }
-    int ssch[256][512]={0};//每班車的s
-    int dsch[256][512]={0};//每班車的d
+    int ssch[256][512]={0};
+    int dsch[256][512]={0};
 
-    for(int i=0;i<n;i++)//排序
+    for(int i=0;i<n;i++)
     {
         for(int j=i;j<n;j++)
         {
@@ -28,15 +28,14 @@ int main()
         }
     }
 
-    end=0;//上一班車的抵達時間
+    end=0;
 
-    for(int i=0;i<n;i++)//i為車班，到時候去找ssch[]哪個是0就知道有幾班車了
+    for(int i=0;i<n;i++)
     {
-        for(int j=0;j<n;j++)//j為那般車的時間表紀錄
-        {
+
           for(int k=0;k<n;k++)
           {
-              if(s[k]>=end && s[k]!=0)//如果發車時間大於上次抵達時間就記錄進時間表內
+              if(s[k]>=end && s[k]!=0)
               {
                   end=d[k];
                   ssch[i][j]=s[k];
@@ -45,7 +44,7 @@ int main()
                   d[k]=0;
                   j++;
               }
-          }
+          
         }
         end=0;
     }
@@ -59,7 +58,7 @@ int main()
         }
     }
 
-    for(int driver = 0; driver < car; driver++){ // 輸出每個駕駛的行程
+    for(int driver = 0; driver < car; driver++){ 
         printf("Driver %d's schedule is", driver+1 );
         for(int f = 0; f < n*2; f++)
         {
